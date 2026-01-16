@@ -13,20 +13,4 @@ Contact form
 Cross-browser compatibility
 🛠️ Technologies Used
 HTML5 – Semantic structure and accessibility
-CSS – Styling, layout
-📁 Project Structure
-portfolio-website/
-│
-├── index.html
-├── about.html
-├── projects.html
-├── contact.html
-│
-├── css/
-│   └── styles.css
-│
-├── assets/
-│   ├── images/
-│   
-│
-└── README.md
+CSS – Styling
