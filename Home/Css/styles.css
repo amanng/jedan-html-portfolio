@@ -17,24 +17,44 @@ h1, h2, h3 {
     
 }
 nav {
-    background-color:#333;
-    padding: 10px 20px;
-    text-align: center;
+    background-color: #333;
+    height: 70px;
+    padding: 0 40px;
+    /* horizontal padding only */
+    display: flex;
+    justify-content: center;
+    align-items: center;
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: height 0.3s ease, padding 0.3s ease;
     z-index: 1000;
 }
-nav a:hover {
-    text-decoration: underline;
+
+/* Shrink on scroll */
+nav.shrink {
+    height: 55px;
+    padding: 0 25px;
 }
+
+/* Nav links */
 nav a {
     color: white;
     margin: 0 15px;
     text-decoration: none;
     font-weight: bold;
+    transition: font-size 0.3s ease;
+}
+
+/* Optional: slightly smaller text when shrunk */
+nav.shrink a {
+    font-size: 0.95rem;
+}
+
+nav a:hover {
+    text-decoration: underline;
 }
 /*#### Main Content Styles #### */
 main {
@@ -109,6 +129,90 @@ ol{
 ul{
     margin-left: 30px;
 
+}
+/*#### Project Card Styles #### */
+.cards {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.card-project1,.card-project2 {
+    border-radius: 5px;
+    color: #333;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    margin: 10px 0 20px 0;
+    text-align: center;
+    background-color: #fafafa;
+    max-width: 450px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    align-items: center;
+}
+
+
+.card-project1 .card-content, .card-project2 .card-content {
+    width: 100%;
+}
+
+.card-project1 h3, .card-project2 h3 {
+    margin-top: 0;
+}
+/*#### Dropdown Styles #### */
+.dropdown {
+    position: relative;
+}
+
+/* Projects main link */
+.dropbtn {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 15px;
+}
+
+/* Dropdown menu */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #333;
+    min-width: 200px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 2000;
+}
+
+/* Dropdown links */
+.dropdown-content a {
+    display: block;
+    padding: 10px 15px;
+    color: white;
+    text-decoration: none;
+}
+.dropdown-content a:hover {
+    background-color: #444;
+}
+.dropdown:hover .dropdown-content {
+    display: block;
+    
+}
+
+.dropbtn:hover {
+    text-decoration: underline;
+}
+.dropdown-content {
+    opacity: 0;
+    transform: translateY(10px);
+    transition: 0.3s ease;
+}
+
+.dropdown:hover .dropdown-content {
+    opacity: 1;
+    transform: translateY(0);
 }
 /*#### Footer Styles #### */
 .submit-button:hover {

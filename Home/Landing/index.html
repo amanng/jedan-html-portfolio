@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -16,11 +16,16 @@
     <title>My Personal Website</title>
   </head>
   <body>
-    <nav>
+    <nav id="navbar">
       <a href="index.html">Home</a>&nbsp;&nbsp;
       <a href="about.html">About Me</a>&nbsp;&nbsp;
       <a href="Contact.html">Contact</a>&nbsp;&nbsp;
-      <a href="projects.html">Projects</a>
+          <div class="dropdown">
+    <a href="projects.html" class="dropbtn">Projects ▾</a>
+    <div class="dropdown-content">
+      <a href="/projects.html#Project1">Frontend Projects</a>
+      <a href="/projects.html#Project2">Task Management Projects</a>
+    </div>
     </nav>
     <main>
       <h1>Shiferaw Nigatu</h1>

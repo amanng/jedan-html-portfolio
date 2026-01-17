@@ -16,11 +16,17 @@
     <title>My Personal Website</title>
   </head>
   <body>
-    <nav>
+    <nav id="navbar">
       <a href="index.html">Home</a>&nbsp;&nbsp;
       <a href="about.html">About Me</a>&nbsp;&nbsp;
       <a href="Contact.html">Contact</a>&nbsp;&nbsp;
-      <a href="projects.html">Projects</a>
+       <div class="dropdown">
+    <a href="projects.html" class="dropbtn">Projects ▾</a>
+    <div class="dropdown-content">
+      <a href="#Project1">Frontend Projects</a>
+      <a href="#Project2">Task Management Projects</a>
+    </div>
+  </div>
     </nav>
     <main>
     <h1>My Projects</h1>
@@ -29,8 +35,17 @@
       responsive layouts, interactive components, and clean user interfaces
       using HTML, CSS, and JavaScript.
     </p>
-    <h2>Project 1: Responsive Portfolio Website</h2>
-    <img src="../Image/person-front-computer-working-html.jpg" alt="Portfolio Website Screenshot" height="200px" width="400px" />
+    <h2 id="Project1">Project 1: Responsive Portfolio Website</h2>
+    <div class="cards">
+    <div class="card-project1">
+    <img src="../Image/person-front-computer-working-html.jpg" alt="Portfolio Website Screenshot"  />
+  <a href="https://github.com/amanng/Personal-Portfolio-Website"><button type="button">View Source Code</button></a>  
+  </div>
+    <div class="card-project2">
+    <img src="../Image/live-demo.jpg" alt="Portfolio Website Screenshot" />
+     <a href="#"><button type="button" >Live Demo</button></a>
+    </div>
+    </div>
     <p>
       <b>Description: </b><br />
       A fully responsive and performance-optimized personal portfolio website
@@ -51,12 +66,18 @@
     <p>
       HTML, CSS, JavaScript
     </p>
-    <a href="https://github.com/amanng/Personal-Portfolio-Website"><button type="button">View Source Code</button></a>
-    &nbsp;&nbsp;
-    <a href="#"><button type="button">Live Demo</button></a>
-    <br /><br />
-    <h2>Project 2: Task Management Web Application</h2>
-    <img src="../Image/programming-background-with-person-working-with-codes-computer.jpg" alt="Task Management App Screenshot" height="200px" width="400px" />
+    
+    <h2 id="Project2">Project 2: Task Management Web Application</h2>
+<div class="cards">
+    <div class="card-project1">
+    <img src="../Image/programming-background-with-person-working-with-codes-computer.jpg" alt="Portfolio Website Screenshot"  />
+  <a href="https://github.com/amanng/Personal-Portfolio-Website"><button type="button">View Source Code</button></a>  
+  </div>
+    <div class="card-project2">
+    <img src="../Image/live-demo.jpg" alt="Portfolio Website Screenshot" />
+     <a href="#"><button type="button" >Live Demo</button></a>
+    </div>
+    </div>    
     <p>
         </b>Description:</b>
         A dynamic task management web application built to improve productivity through an intuitive and responsive user interface. The application leverages modern JavaScript techniques to manage state, handle user interactions, and persist data efficiently.
@@ -72,9 +93,6 @@
     <p>
       HTML, CSS, JavaScript
     </p>
-    <a href="https://github.com/amanng/Personal-Portfolio-Website" class="home-projects-link" ><button type="button">View Source Code</button></a>
-    &nbsp;&nbsp;
-    <a href="#" class="home-projects-link"><button type="button"  >Live Demo</button></a>
     <br /><br />
     </main> 
     <footer>
