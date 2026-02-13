@@ -230,3 +230,20 @@ footer a {
     color: #ffcc00;
     text-decoration: none;
 }
+.submit-button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.form-message {
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+.form-message.success {
+    color: #2e7d32;
+}
+
+.form-message.error {
+    color: #c62828;
+}

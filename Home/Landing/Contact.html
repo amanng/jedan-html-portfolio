@@ -14,6 +14,18 @@
       content="Welcome to my personal website where you can learn more about me and my projects."
     />
     <title>My Personal Website</title>
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init({
+        publicKey: "-nqdP_7ZzDgWzUB5y",
+      });
+   })();
+   
+</script>
+<script src="../Assets/js/contact.js"> </script>
   </head>
   <body>
     <header>
@@ -44,7 +56,7 @@
       />
       <br /><br />
 
-      <form method="POST">
+      <form id="contactForm">
         <label for="name">First Name:</label><br />
         <input
           type="text"
@@ -72,10 +84,21 @@
           autocomplete="email"
           placeholder="Your email address"
         /><br /><br />
+          <label for="subject">Subject:</label><br />
+        <input
+          type="subject"
+          id="subject"
+          name="subject"
+          required
+          autocomplete="subject"
+          placeholder="Subject"
+        /><br /><br />
         <label for="message">Message:</label><br />
         <textarea id="message" name="message" rows="4" required></textarea
         ><br /><br />
-        <input class="submit-button" type="submit" value="Send Message" />
+        <input class="submit-button" type="submit" id="submitBtn" value="Send Message" />
+        <p id="formMessage"></p>
+
       </form>
 
       <br />
